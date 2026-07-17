@@ -212,7 +212,7 @@ export default function Home() {
               {[
                 ["📍", "Alamat", site.address],
                 ["⏰", "Jam Praktik", site.hours],
-                ["💬", "WhatsApp", "+62 812-3456-7890"],
+                ["💬", "WhatsApp", "+62 878-3037-7139"],
                 ["🚨", "Darurat", "Slot same-day untuk kasus darurat"],
               ].map(([ic, t, d]) => (
                 <div key={t} className="flex gap-4">
