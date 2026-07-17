@@ -1,7 +1,7 @@
 export const site = {
   name: "Smile Dental",
   logo: "🦷",
-  whatsapp: "6281234567890", // TODO: ganti nomor asli
+  whatsapp: "6287830377139", // TODO: ganti nomor asli
   waGreeting: "Halo Smile Dental! Saya ingin booking appointment.",
   address: "Jl. Senyum Sehat No. 21, Tebet, Jakarta Selatan",
   hours: "Senin–Sabtu 09.00–20.00, Minggu 09.00–14.00",
@@ -37,7 +37,7 @@ export const footer = {
     {
       title: "Hubungi",
       links: [
-        { href: "https://wa.me/6281234567890", label: "WhatsApp" },
+        { href: "https://wa.me/6287830377139", label: "WhatsApp" },
         { href: "#", label: "Instagram" },
         { href: "#", label: "Google Maps" },
       ],
