@@ -1,13 +1,14 @@
 import ContactForm from "@/components/ContactForm";
+import Icon from "@/components/Icon";
 import { site } from "@/lib/site";
 
 const services = [
-  { ic: "✨", t: "Scaling & Polishing", d: "Pembersihan karang gigi menyeluruh dengan ultrasonic scaler." },
-  { ic: "🦷", t: "Tambal Gigi Estetik", d: "Tambalan komposit sewarna gigi, rapi dan tahan lama." },
-  { ic: "😁", t: "Behel & Aligner", d: "Perataan gigi dengan behel metal, ceramic, atau clear aligner." },
-  { ic: "👑", t: "Crown & Veneer", d: "Perbaikan bentuk dan warna gigi untuk senyum lebih percaya diri." },
-  { ic: "🪥", t: "Perawatan Anak", d: "Dokter gigi anak yang sabar, ruangan ramah anak, bebas takut." },
-  { ic: "⚕️", t: "Cabut & Bedah Minor", d: "Pencabutan gigi termasuk impaksi bungsu dengan anestesi nyaman." },
+  { ic: "sparkles", t: "Scaling & Polishing", d: "Pembersihan karang gigi menyeluruh dengan ultrasonic scaler." },
+  { ic: "tooth", t: "Tambal Gigi Estetik", d: "Tambalan komposit sewarna gigi, rapi dan tahan lama." },
+  { ic: "smile", t: "Behel & Aligner", d: "Perataan gigi dengan behel metal, ceramic, atau clear aligner." },
+  { ic: "crown", t: "Crown & Veneer", d: "Perbaikan bentuk dan warna gigi untuk senyum lebih percaya diri." },
+  { ic: "brush", t: "Perawatan Anak", d: "Dokter gigi anak yang sabar, ruangan ramah anak, bebas takut." },
+  { ic: "stethoscope", t: "Cabut & Bedah Minor", d: "Pencabutan gigi termasuk impaksi bungsu dengan anestesi nyaman." },
 ];
 
 const doctors = [
@@ -17,12 +18,12 @@ const doctors = [
 ];
 
 const gallery = [
-  { emoji: "🏥", bg: "from-[#0ea5e9] to-[#0b3954]" },
-  { emoji: "🪑", bg: "from-[#38bdf8] to-[#0369a1]" },
-  { emoji: "🔬", bg: "from-[#0b3954] to-[#0ea5e9]" },
-  { emoji: "🧸", bg: "from-[#7dd3fc] to-[#0284c7]" },
-  { emoji: "📷", bg: "from-[#0284c7] to-[#0b3954]" },
-  { emoji: "🌿", bg: "from-[#22c1c3] to-[#0b6e75]" },
+  "/img/gallery-1.jpg",
+  "/img/gallery-2.jpg",
+  "/img/gallery-3.jpg",
+  "/img/gallery-4.jpg",
+  "/img/gallery-5.jpg",
+  "/img/gallery-6.jpg",
 ];
 
 const prices = [
@@ -59,7 +60,7 @@ export default function Home() {
       <section className="bg-alt py-24">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-5 md:grid-cols-[1.1fr_.9fr]">
           <div>
-            <Eyebrow>🦷 Klinik Gigi Keluarga · Tebet</Eyebrow>
+            <Eyebrow>Klinik Gigi Keluarga · Tebet</Eyebrow>
             <h1 className="text-4xl font-extrabold leading-tight md:text-5xl">
               Senyum Sehat untuk <span className="text-accent">Seluruh Keluarga</span>
             </h1>
@@ -81,9 +82,7 @@ export default function Home() {
               <span>✓ Ramah Anak</span>
             </div>
           </div>
-          <div className="flex aspect-square items-center justify-center rounded-[40px] bg-gradient-to-br from-[#38bdf8] to-[#0b3954] text-9xl shadow-2xl shadow-accent/20">
-            🦷
-          </div>
+          <img src="/img/hero.jpg" alt="Klinik Smile Dental" loading="lazy" className="aspect-square w-full rounded-[40px] object-cover shadow-2xl shadow-accent/20" />
         </div>
       </section>
 
@@ -95,7 +94,7 @@ export default function Home() {
           <div className="mt-12 grid gap-6 text-left sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <div key={s.t} className="rounded-2xl border-[1.5px] border-line p-7 transition-colors hover:border-accent">
-                <div className="flex h-13 w-13 items-center justify-center rounded-xl bg-surface text-2xl">{s.ic}</div>
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-surface text-accent"><Icon name={s.ic} className="h-6 w-6" /></div>
                 <h3 className="mt-4 text-lg font-extrabold">{s.t}</h3>
                 <p className="mt-2 text-sm text-muted">{s.d}</p>
               </div>
@@ -130,10 +129,8 @@ export default function Home() {
           <Eyebrow>Klinik Kami</Eyebrow>
           <h2 className="text-3xl font-extrabold md:text-4xl">Nyaman Sejak Masuk Pintu</h2>
           <div className="mt-12 grid grid-cols-2 gap-4 md:grid-cols-3">
-            {gallery.map((g, i) => (
-              <div key={i} className={`flex aspect-[4/3] items-center justify-center rounded-2xl bg-gradient-to-br text-5xl transition-transform hover:scale-[1.03] ${g.bg}`}>
-                {g.emoji}
-              </div>
+            {gallery.map((src, i) => (
+              <img key={i} src={src} alt={`Smile Dental ${i + 1}`} loading="lazy" className="aspect-[4/3] w-full rounded-2xl object-cover transition-transform hover:scale-[1.03]" />
             ))}
           </div>
         </div>
